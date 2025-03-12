@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Master tech skills with Coursars - Your premier platform for professional tech education. Learn web development, data science, cloud computing, and more from industry experts.">
+    <meta name="keywords" content="tech education, online courses, web development, data science, cloud computing, cybersecurity, AI, ML">
+    <meta name="author" content="Coursars">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RDWNW91QY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RDWNW91QY6');
+</script>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://coursars.com/">
+    <meta property="og:title" content="Coursars - Tech Education Platform">
+    <meta property="og:description" content="Master tech skills with Coursars - Your premier platform for professional tech education.">
+    <meta property="og:image" content="https://img.freepik.com/free-photo/beautiful-student-girl-learning-online-outdoor_496169-2823.jpg?t=st=1741760622~exp=1741764222~hmac=cc7ae0d10e3f1f8e9cf2087c8578fe5bedde5a4f4935fd8cd4bd1bfffa8cbb8b&w=900">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://coursars.com/">
+    <meta property="twitter:title" content="Coursars - Tech Education Platform">
+    <meta property="twitter:description" content="Master tech skills with Coursars - Your premier platform for professional tech education.">
+    <meta property="twitter:image" content="https://img.freepik.com/free-photo/beautiful-student-girl-learning-online-outdoor_496169-2823.jpg?t=st=1741760622~exp=1741764222~hmac=cc7ae0d10e3f1f8e9cf2087c8578fe5bedde5a4f4935fd8cd4bd1bfffa8cbb8b&w=900">
+
+    <title>Coursars - Tech Education Platform</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="logo">Coursars</div>
+        <ul class="nav-links">
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="/course">Courses</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          
+        </ul>
+        <div class="nav-buttons">
+          <button class="btn btn-secondary" onclick="window.location.href='contact.html'">Log In</button>
+          <button class="btn btn-primary" onclick="window.location.href='contact.html'">Sign Up</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Master Tech Skills with Industry Experts</h1>
+          <p>Learn from professionals and advance your career with our comprehensive tech courses</p>
+          <button class="btn btn-primary btn-large" onclick="window.location.href='course.html'">Explore Courses</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">23+</span>
+            <span class="stat-label">Courses</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">5k+</span>
+            <span class="stat-label">Students</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">95%</span>
+            <span class="stat-label">Satisfaction</span>
+          </div>
+        </div>
+      </section>
+      <section class="about-hero">
+        <div class="about-hero-content">
+          <h1>Transforming Tech Education</h1>
+          <p>Our mission is to make quality tech education accessible to everyone</p>
+        </div>
+      </section>
+
+      <section class="about-story">
+        <div class="container">
+          <div class="story-grid">
+            <div class="story-content">
+              <h2>Our Story</h2>
+              <p>Founded in 2023, Coursars began with a simple idea: everyone deserves access to quality tech education. What started as a small collection of programming courses has grown into a comprehensive platform serving over 50,000 students worldwide.</p>
+              <p>Our team of industry experts and educational professionals works tirelessly to create courses that not only teach the latest technologies but also prepare students for real-world challenges.</p>
+            </div>
+            <div class="story-image">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800" alt="Team collaboration">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="categories">
+        <h2>Popular Categories</h2>
+        <div class="category-filters" id="categoryFilters">
+          <button class="category-btn active" data-category="all">All</button>
+          <button class="category-btn" data-category="web">Web Development</button>
+          <button class="category-btn" data-category="data">Data Science</button>
+          <button class="category-btn" data-category="cloud">Cloud Computing</button>
+          <button class="category-btn" data-category="security">Cybersecurity</button>
+          <button class="category-btn" data-category="ai">AI & ML</button>
+        </div>
+        <div class="courses-grid" id="coursesGrid"></div>
+      </section>
+
+      <section class="why-us">
+        <h2>Why Coursars?</h2>
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon">🎯</div>
+            <h3>Industry-Focused</h3>
+            <p>Curriculum designed with industry experts</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">💡</div>
+            <h3>Hands-on Learning</h3>
+            <p>Practice with real-world projects</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🚀</div>
+            <h3>Career Growth</h3>
+            <p>Direct path to career advancement</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🤝</div>
+            <h3>Community</h3>
+            <p>Learn alongside peers worldwide</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <h2>Student Success Stories</h2>
+        <div class="testimonials-slider" id="testimonialSlider"></div>
+      </section>
+
+      <section class="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>How do I get started?</h3>
+            <p>Simply sign up for an account, browse our course catalog, and enroll in any course that interests you. You can begin learning immediately after enrollment.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Are the courses self-paced?</h3>
+            <p>Yes, all our courses are self-paced. You can learn at your own schedule and access the content 24/7.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you provide certificates?</h3>
+            <p>Yes, upon successful completion of a course, you'll receive a verified certificate that you can share on your resume and LinkedIn profile.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What support is available?</h3>
+            <p>We offer 24/7 technical support, active community forums, and direct access to instructors for course-related queries.</p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="cta-section">
+        <div class="cta-content">
+          <h2>Start Your Tech Journey Today</h2>
+          <p>Join thousands of successful students who have transformed their careers through our comprehensive tech education platform. Whether you're a beginner or looking to upgrade your skills, we have the perfect course for you.</p>
+          <ul class="cta-features">
+            <li>✓ Flexible learning schedule</li>
+            <li>✓ Expert-led instruction</li>
+            <li>✓ Industry-recognized certificates</li>
+            <li>✓ Lifetime access to course materials</li>
+          </ul>
+          <button class="btn btn-primary btn-large" onclick="window.location.href='course.html'">Get Started Now</button>
+        </div>
+        <div class="cta-image">
+          <img src="https://img.freepik.com/free-photo/young-student-learning-online_23-2149038406.jpg" 
+               alt="Student learning online" 
+               loading="lazy">
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Coursars</h3>
+          <p>Empowering tech careers through quality education</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/course">Browse Courses</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/terms">Terms</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: support@coursars.com</p>
+          <p>Phone: +12819374192</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Coursars. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

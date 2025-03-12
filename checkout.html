@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Checkout page for course purchase. Securely process your payment and complete your purchase.">
+    <meta name="keywords" content="Coursars, tech education, online courses, web development, data science, cloud computing, cybersecurity, AI, ML">
+    <meta name="author" content="Coursars">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RDWNW91QY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RDWNW91QY6');
+</script>
+    <title>Checkout - Course Purchase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+          <div class="logo">Coursars</div>
+          <ul class="nav-links">
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/course">Courses</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+          <div class="nav-buttons">
+            <button class="btn btn-secondary" onclick="window.location.href='contact.html'">Log In</button>
+            <button class="btn btn-primary" onclick="window.location.href='contact.html'">Sign Up</button>
+          </div>
+        </nav>
+      </header>
+
+    <main class="checkout-container">
+        <div class="checkout-grid">
+            <!-- Course Summary Section -->
+            <div class="course-summary">
+                <h2>Order Summary</h2>
+                <div class="course-preview" id="coursePreview">
+                    <!-- Course details will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Payment Form Section -->
+            <div class="payment-section">
+                <h2>Payment Details</h2>
+                <form id="paymentForm" class="payment-form">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" required placeholder="John Doe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required placeholder="john@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" required placeholder="1234 5678 9012 3456">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry">Expiry Date</label>
+                            <input type="text" id="expiry" required placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" required placeholder="123">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Complete Purchase</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Coursars</h3>
+            <p>Empowering tech careers through quality education</p>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="/course">Browse Courses</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/terms">Terms</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: support@coursars.com</p>
+            <p>Phone: +12819374192</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Coursars. All rights reserved.</p>
+        </div>
+      </footer>
+    <script src="checkout.js"></script>
+</body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Get course ID from URL
+    const courseId = window.location.pathname.split('/').pop();
+    
+    // Fetch course details and populate the summary
+    displayCourseSummary(courseId);
+
+    // Handle form submission
+    const form = document.getElementById('paymentForm');
+    form.addEventListener('submit', handlePayment);
+});
+
+function displayCourseSummary(courseId) {
+    // This would typically fetch from your backend
+    // For now, using sample data
+    const course = {
+        id: courseId,
+        title: "Advanced JavaScript Masterclass",
+        price: 89.99,
+        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500",
+        instructor: "John Smith"
+    };
+
+    const coursePreview = document.getElementById('coursePreview');
+    coursePreview.innerHTML = `
+        <img src="${course.image}" alt="${course.title}">
+        <h3>${course.title}</h3>
+        <p>Instructor: ${course.instructor}</p>
+        <div class="price-info">
+            <h4>Total Price:</h4>
+            <span class="price">$${course.price}</span>
+        </div>
+    `;
+}
+
+function handlePayment(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = {
+        fullName: document.getElementById('fullName').value,
+        email: document.getElementById('email').value,
+        cardNumber: document.getElementById('cardNumber').value,
+        expiry: document.getElementById('expiry').value,
+        cvv: document.getElementById('cvv').value
+    };
+
+    // Basic validation
+    if (!formData.fullName || !formData.email || !formData.cardNumber || !formData.expiry || !formData.cvv) {
+        alert('Please fill in all fields');
+        return;
+    }
+
+    // Here you would typically:
+    // 1. Send payment details to your payment processor
+    // 2. Create order in your database
+    // 3. Send confirmation email
+    
+    // For demo purposes, we'll just show a success message and redirect
+    alert('Payment processed successfully!');
+    
+    // Redirect to thank you page
+    window.location.href = '/thankyou.html';
+}
+
+// Basic form validation
+document.getElementById('cardNumber').addEventListener('input', function(e) {
+    // Format card number with spaces
+    let value = e.target.value.replace(/\s/g, '').replace(/\D/g, '');
+    let formattedValue = value.replace(/(\d{4})/g, '$1 ').trim();
+    e.target.value = formattedValue;
+});
+
+document.getElementById('expiry').addEventListener('input', function(e) {
+    // Format expiry date
+    let value = e.target.value.replace(/\D/g, '');
+    if (value.length > 2) {
+        value = value.slice(0,2) + '/' + value.slice(2,4);
+    }
+    e.target.value = value;
+});
+
+document.getElementById('cvv').addEventListener('input', function(e) {
+    // Limit CVV to 3-4 digits
+    e.target.value = e.target.value.replace(/\D/g, '').slice(0,4);
+});
+</script>

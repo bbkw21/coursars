@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore our comprehensive course catalog. Choose from web development, data science, cloud computing, and more. Start your tech journey today!">
+    <meta name="keywords" content="Coursars, tech education, online courses, web development, data science, cloud computing, cybersecurity, AI, ML">
+    <meta name="author" content="Coursars">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RDWNW91QY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RDWNW91QY6');
+</script>
+    <title>Course Details - Coursars</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="logo">Coursars</div>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/course" class="active">Courses</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+        <div class="nav-buttons">
+          <button class="btn btn-secondary" onclick="window.location.href='contact.html'">Log In</button>
+          <button class="btn btn-primary" onclick="window.location.href='contact.html'">Sign Up</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="course-details" id="courseDetails">
+        <!-- Course details will be populated by JavaScript -->
+      </div>
+
+      <section class="related-courses">
+        <div class="container">
+          <h2>Related Courses</h2>
+          <div class="courses-grid" id="relatedCourses"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Coursars</h3>
+          <p>Empowering tech careers through quality education</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/course">Browse Courses</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/terms">Terms</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: support@coursars.com</p>
+          <p>Phone: +12819374192</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Coursars. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/course.js"></script>
+  </body>
+</html>
